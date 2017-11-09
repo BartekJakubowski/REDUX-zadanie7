@@ -4,15 +4,15 @@ import { REMOVE_COMMENT } from './actions';
 import { THUMBS_UP } from './actions';
 import { THUMBS_DOWN } from './actions';
 
-export default function comments (state = [], action) {
+function comments (state = [], action) {
 	switch(action.type) {
 		case ADD_COMMENT:
-			return [{
+			return state = [{
 				id: action.id,
 				text: action.text,
 				votes: 0
 			}
-			, ...state.comments];
+			, ...state];
 		case REMOVE_COMMENT:
 			return state.filter(comment => comment.id !== action.id);
 		case EDIT_COMMENT:
@@ -40,3 +40,5 @@ export default function comments (state = [], action) {
 			return state;
 	}
 }
+
+export default comments;

@@ -14,7 +14,7 @@ export function addComment(text) {
 	}
 }
 
-function editComment(text, id) {
+export function editComment(text, id) {
 	return {
 		type: EDIT_COMMENT,
 		text,
@@ -22,21 +22,21 @@ function editComment(text, id) {
 	}
 }
 
-function removeComment(id) {
+export function removeComment(id) {
 	return {
 		type: REMOVE_COMMENT,
 		id: id
 	}
 }
 
-function thumbsUp(id) {
+export function thumbsUp(id) {
 	return {
 		type: THUMBS_UP,
 		id: id
 	}
 }
 
-function thumbsDown(id) {
+export function thumbsDown(id) {
 	return {
 		type: THUMBS_DOWN,
 		id: id
